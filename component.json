@@ -1,0 +1,15 @@
+{
+  "name": "entries",
+  "repo": "ndhoule/entries",
+  "version": "0.0.0",
+  "description": "Utility to get key-value pairs from an object",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/each.git"
+  },
+  "scripts": ["index.js"],
+  "development": {
+    "chaijs/chai": "^1.10.0"
+  }
+}

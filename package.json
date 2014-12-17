@@ -1,0 +1,20 @@
+{
+  "name": "component-entries",
+  "description": "Utility to get key-value pairs from an object",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Nathan Houle <nathan@nathanhoule.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndhoule/entries.git"
+  },
+  "keywords": [
+    "entries",
+    "utility"
+  ],
+  "devDependencies": {
+    "duo": "^0.9.0",
+    "duo-test": "^0.3.12",
+    "phantomjs": "^1.9.12"
+  }
+}
