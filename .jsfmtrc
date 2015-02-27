@@ -1,0 +1,18 @@
+{
+  "lineBreak" : {
+    "before" : {
+      "EndOfFile" : 1,
+      "ReturnStatement": 1,
+      "TryKeyword": 1
+    }
+  },
+  "quotes": {
+    "type": "single",
+    "avoidEscape": false
+  },
+  "plugins": [
+    "esformatter-braces",
+    "esformatter-quotes",
+    "esformatter-semicolons"
+  ]
+}

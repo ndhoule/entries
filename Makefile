@@ -1,24 +1,42 @@
-DUO = ./node_modules/.bin/duo
-DUO_TEST = ./node_modules/.bin/duo-test
+#
+# Files.
+#
 
-tests = ./test
+SRCS = index.js
+TESTS = test/index.js
 
-node_modules: package.json
+#
+# Options.
+#
+
+GREP ?=.
+
+#
+# Tasks.
+#
+
+node_modules: $(wildcard package.json node_modules/**/package.json)
 	@npm install
 
 clean:
-	@rm -rf node_modules components build.js
+	@rm -rf node_modules *.log
 
-build.js: test/index.js | node_modules
-	@$(DUO) --stdout $< > build.js
+fmt:
+	@node_modules/.bin/jsfmt --write $(SRCS) $(TESTS)
 
-test: test-phantomjs
+lint:
+	@node_modules/.bin/eslint $(SRCS) $(TESTS)
 
-test-phantomjs: build.js
-	@$(DUO_TEST) -R spec -P 3000 phantomjs
+test: lint
+	@node_modules/.bin/mocha \
+		--ui bdd \
+		--reporter spec \
+		--grep "$(GREP)" \
+		$(TESTS)
 
-test-browser: build.js
-	@$(DUO_TEST) -R spec -P 3000 browser
+#
+# Phonies and default.
+#
 
-.DEFAULT_GOAL = build.js
-.PHONY: build.js test
+.DEFAULT_GOAL = test
+.PHONY: clean fmt lint test

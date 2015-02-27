@@ -15,6 +15,8 @@
   "devDependencies": {
     "duo": "^0.9.0",
     "duo-test": "^0.3.12",
+    "eslint": "^0.15.1",
+    "jsfmt": "^0.4.0",
     "phantomjs": "^1.9.12"
   }
 }
