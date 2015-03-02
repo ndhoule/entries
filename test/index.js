@@ -20,4 +20,26 @@ describe('entries', function() {
   it('should work on an empty object', function() {
     expect(entries({})).to.deep.have.members([]);
   });
+
+  if (typeof Object.create === 'function') {
+    describe('IE9+ tests', function() {
+      it('should ignore inherited properties (IE9+)', function() {
+        var parent = { parent: true };
+        var child = Object.create(parent, {
+          child: { value: true }
+        });
+
+        expect(entries(child)).to.deep.equal([['child', true]]);
+      });
+
+      it('should ignore non-enumerable properties (IE9+)', function() {
+        var source = Object.create({}, {
+          visible: { value: true, enumerable: true },
+          invisible: { value: true, enumerable: false }
+        });
+
+        expect(entries(source)).to.deep.equal([['visible', true]]);
+      });
+    });
+  }
 });
