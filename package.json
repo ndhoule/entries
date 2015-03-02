@@ -15,7 +15,7 @@
   "devDependencies": {
     "duo": "^0.9.0",
     "duo-test": "^0.3.12",
-    "esformatter-braces": "^1.0.0",
+    "esformatter-braces": "^0.1.7",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
     "eslint": "^0.15.1",

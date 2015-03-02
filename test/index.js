@@ -1,6 +1,6 @@
 'use strict';
 
-var expect = require('chaijs/chai').expect;
+var assert = require('assert');
 var entries = require('..');
 
 describe('entries', function() {
@@ -8,16 +8,16 @@ describe('entries', function() {
     var input = { a: 1, b: 2, '3': 'c', '4': 'd' };
     var expected = [ ['a', 1], ['b', 2], ['3', 'c'], ['4', 'd'] ];
 
-    expect(entries(input)).to.deep.have.members(expected);
+    assert.deepEqual(entries(input).sort(), expected.sort());
   });
 
   it('should work with nested objects', function() {
     var input = { a: {} };
 
-    expect(entries(input)[0][1]).to.equal(input.a);
+    assert.equal(entries(input)[0][1], input.a);
   });
 
   it('should work on an empty object', function() {
-    expect(entries({})).to.deep.have.members([]);
+    assert.deepEqual(entries({}), []);
   });
 });
