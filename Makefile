@@ -27,16 +27,22 @@ fmt:
 lint:
 	@node_modules/.bin/eslint $(SRCS) $(TESTS)
 
-test: lint
+test:
 	@node_modules/.bin/mocha \
 		--ui bdd \
 		--reporter spec \
 		--grep "$(GREP)" \
 		$(TESTS)
 
+test-browser:
+	@node_modules/.bin/zuul -- $(TESTS)
+
+test-browser-local:
+	@node_modules/.bin/zuul --local -- $(TESTS)
+
 #
 # Phonies and default.
 #
 
 .DEFAULT_GOAL = test
-.PHONY: clean fmt lint test
+.PHONY: clean fmt lint test test-browser test-browser-local

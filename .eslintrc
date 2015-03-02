@@ -1,4 +1,6 @@
 {
+  "ecmaFeatures": {},
+
   "env": {
     "node": true,
     "browser": true
@@ -6,6 +8,7 @@
 
   "rules": {
     "quotes": [2, "single"],
-    "eqeqeq": [2, "allow-null"]
+    "eqeqeq": [2, "allow-null"],
+    "no-shadow": 0
   }
 }

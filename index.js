@@ -27,7 +27,7 @@ var entries = function entries(object) {
   }
 
   return results;
-}
+};
 
 /**
  * Exports.

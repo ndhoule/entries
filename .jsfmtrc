@@ -6,6 +6,14 @@
       "TryKeyword": 1
     }
   },
+  "whiteSpace": {
+    "before": {
+      "BlockComment": 0
+    },
+    "after": {
+      "BlockComment": 0
+    }
+  },
   "quotes": {
     "type": "single",
     "avoidEscape": false
