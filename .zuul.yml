@@ -1,0 +1,11 @@
+name: arity
+ui: mocha-bdd
+browsers:
+  - name: chrome
+    version: 39..latest
+  - name: firefox
+    version: 34..latest
+  - name: safari
+    version: 7..latest
+  - name: internet explorer
+    version: 6..latest
