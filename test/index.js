@@ -4,6 +4,7 @@
 
 var assert = require('assert');
 var entries = require('..');
+var es5It = typeof Object.create === 'function' ? it : xit;
 
 describe('entries', function() {
   it('produce a nested array of key-value pairs', function() {
@@ -23,25 +24,21 @@ describe('entries', function() {
     assert.deepEqual(entries({}), []);
   });
 
-  if (typeof Object.create === 'function') {
-    describe('IE9+ tests', function() {
-      it('should ignore inherited properties (IE9+)', function() {
-        var parent = { parent: true };
-        var child = Object.create(parent, {
-          child: { value: true }
-        });
-
-        expect(entries(child)).to.deep.equal([['child', true]]);
-      });
-
-      it('should ignore non-enumerable properties (IE9+)', function() {
-        var source = Object.create({}, {
-          visible: { value: true, enumerable: true },
-          invisible: { value: true, enumerable: false }
-        });
-
-        expect(entries(source)).to.deep.equal([['visible', true]]);
-      });
+  es5It('should ignore inherited properties', function() {
+    var parent = { parent: true };
+    var child = Object.create(parent, {
+      child: { value: true, enumerable: true }
     });
-  }
+
+    assert.deepEqual(entries(child), [['child', true]]);
+  });
+
+  es5It('should ignore non-enumerable properties', function() {
+    var source = Object.create({}, {
+      visible: { value: true, enumerable: true },
+      invisible: { value: true, enumerable: false }
+    });
+
+    assert.deepEqual(entries(source), [['visible', true]]);
+  });
 });
