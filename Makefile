@@ -31,7 +31,7 @@ lint:
 .PHONY: lint
 
 test:
-	@if [[ -z "$(BROWSER_NAME)" || -z "$(BROWSER_VERSION)" ]]; then make test-node; else make test-browser; fi
+	@if [ -z "$(BROWSER_NAME)" ] && [ -z "$(BROWSER_VERSION)" ]; then make test-node; else make test-browser; fi
 .PHONY: test
 .DEFAULT_GOAL = test
 
