@@ -1,16 +1,24 @@
-# entries [![CI](https://travis-ci.org/ndhoule/entries.svg?branch=master
+# entries [![CI][ci-badge]][ci-link]
 
 Utility to get key-value pairs from an object.
 
 ## Installation
 
+Browser:
+
 ```sh
-$ component install ndhoule/entries
+component install ndhoule/each
+```
+
+Node:
+
+```sh
+$ npm install each
 ```
 
 ## API
 
-### `entries(object)`
+### `entries(object : Object)`
 
 Return a nested array containing an object's iterable, own key-value pairs.
 
@@ -21,4 +29,7 @@ entries({ a: 1, b: 2 });
 
 ## License
 
-Code copyright 2014 [Nathan Houle](mailto:nathan+github@nathanhoule.com). Released under the [MIT license](LICENSE.md).
+Released under the [MIT license](LICENSE.md).
+
+[ci-link]: https://travis-ci.org/ndhoule/arity
+[ci-badge]: https://travis-ci.org/ndhoule/arity.svg?branch=master
