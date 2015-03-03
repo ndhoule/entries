@@ -1,4 +1,4 @@
-# entries [![Circle CI](https://circleci.com/gh/ndhoule/entries.svg?style=svg&circle-token=c1aad67f0096cfa0997f27d5e3d314347c7679cf)](https://circleci.com/gh/ndhoule/entries)
+# entries [![CI](https://travis-ci.org/ndhoule/entries.svg?branch=master
 
 Utility to get key-value pairs from an object.
 
