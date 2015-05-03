@@ -1,5 +1,5 @@
 {
-  "name": "component-entries",
+  "name": "@ndhoule/entries",
   "description": "Utility to get key-value pairs from an object",
   "version": "1.0.0",
   "main": "index.js",
@@ -9,8 +9,9 @@
     "url": "https://github.com/ndhoule/entries.git"
   },
   "keywords": [
-    "entries",
-    "utility"
+    "functional",
+    "component",
+    "entries"
   ],
   "devDependencies": {
     "esformatter-braces": "^0.1.7",

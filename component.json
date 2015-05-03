@@ -6,10 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/component/each.git"
+    "url": "https://github.com/ndhoule/entries.git"
   },
-  "scripts": ["index.js"],
-  "development": {
-    "chaijs/chai": "^1.10.0"
-  }
+  "scripts": ["index.js"]
 }
