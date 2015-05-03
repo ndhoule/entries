@@ -1,7 +1,7 @@
 {
   "name": "entries",
   "repo": "ndhoule/entries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility to get key-value pairs from an object",
   "license": "MIT",
   "repository": {

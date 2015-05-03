@@ -1,7 +1,7 @@
 {
   "name": "@ndhoule/entries",
   "description": "Utility to get key-value pairs from an object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "Nathan Houle <nathan@nathanhoule.com>",
   "repository": {
