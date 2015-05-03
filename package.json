@@ -1,9 +1,8 @@
 {
   "name": "@ndhoule/entries",
-  "description": "Utility to get key-value pairs from an object",
   "version": "1.0.1",
+  "description": "Utility to get key-value pairs from an object",
   "main": "index.js",
-  "author": "Nathan Houle <nathan@nathanhoule.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ndhoule/entries.git"
@@ -13,6 +12,12 @@
     "component",
     "entries"
   ],
+  "author": "Nathan Houle <nathan@nathanhoule.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndhoule/entries/issues"
+  },
+  "homepage": "https://github.com/ndhoule/entries",
   "devDependencies": {
     "esformatter-braces": "^0.1.7",
     "esformatter-quotes": "^1.0.0",
