@@ -4,16 +4,9 @@ Utility to get key-value pairs from an object.
 
 ## Installation
 
-Browser:
-
 ```sh
-component install ndhoule/each
-```
-
-Node:
-
-```sh
-$ npm install each
+$ component install ndhoule/entries
+$ npm install @ndhoule/entries
 ```
 
 ## API
