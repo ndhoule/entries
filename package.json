@@ -1,6 +1,6 @@
 {
   "name": "@ndhoule/entries",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Utility to get key-value pairs from an object",
   "main": "index.js",
   "repository": {
