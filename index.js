@@ -1,9 +1,5 @@
 'use strict';
 
-/**
- * `hasOwnProperty` reference.
- */
-
 var has = Object.prototype.hasOwnProperty;
 
 /**
@@ -16,7 +12,6 @@ var has = Object.prototype.hasOwnProperty;
  * @param {Object} object
  * @return {Array[]} An array of the object's key-value pairs.
  */
-
 var entries = function entries(object) {
   var results = [];
 
@@ -29,7 +24,7 @@ var entries = function entries(object) {
   return results;
 };
 
-/**
+/*
  * Exports.
  */
 
